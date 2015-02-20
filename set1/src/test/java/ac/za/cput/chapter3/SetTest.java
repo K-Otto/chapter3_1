@@ -11,13 +11,12 @@ import org.junit.Test;
  */
 public class SetTest {
     private SetApp add1;
-    private SetApp add2;
+
     @Before
     public void setUp() throws Exception {
         add1 = new SetAppImpl();
-        add2 = new SetAppImpl();
         add1.add1("1");
-        add2.add2("4");
+
 
     }
 

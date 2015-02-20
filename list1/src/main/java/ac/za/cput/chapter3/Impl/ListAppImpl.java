@@ -24,7 +24,7 @@ public class ListAppImpl implements ListApp {
     }
     @Override
     public void add2( int index, String k) {
-        aList.add(k);
+        aList.add(index, k);
 
     }
     @Override
