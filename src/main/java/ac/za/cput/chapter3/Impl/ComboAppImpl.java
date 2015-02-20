@@ -14,7 +14,7 @@ public class ComboAppImpl implements ComboApp {
     private MapApp mapAddModule = new MapAppImpl();
 
     @Override
-    public void list1(int a, String b) {
+    public void list11(int a, String b) {
         listAddModule.add1(a, b);
 
 
@@ -22,16 +22,26 @@ public class ComboAppImpl implements ComboApp {
     }
     @Override
     public void set11(String a) {
-        setAddModule.add2(a);
+        setAddModule.add1(a);
     }
     @Override
     public void map11(String a, String b) {
-        mapAddModule.add2(a, b);
+        mapAddModule.add1(a, b);
     }
+
     @Override
-    public String views() {
+    public String viewList() {
         return listAddModule.view2();
     }
+    @Override
+    public String viewSet() {
+        return setAddModule.view();
+    }
+    @Override
+    public String viewMap(String key) {
+        return mapAddModule.viewMap(key);
+    }
+
 
 
 }

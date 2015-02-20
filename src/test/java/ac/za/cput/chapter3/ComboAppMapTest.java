@@ -1,7 +1,6 @@
 package ac.za.cput.chapter3;
 
 import ac.za.cput.chapter3.Config.AppConfig;
-import ac.za.cput.chapter3.Impl.ComboAppImpl;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,26 +11,27 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 /**
  * Created by student on 2015/02/20.
  */
-public class ComboAppTest {
-    private ComboApp listTests;
+public class ComboAppMapTest {
+
+    private ComboApp mapTests;
     private ApplicationContext ctx;
 
     @Before
     public void setUp() throws Exception {
         ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-        listTests = (ComboApp)ctx.getBean("calc");
+        mapTests = (ComboApp)ctx.getBean("calc");
 
 
 
 
 
-        listTests.list11(0, "hello");
+        mapTests.map11("key1", "hello");
 
     }
 
     @Test
-    public void testList() throws Exception {
-        Assert.assertEquals("[hello]", listTests.viewList());
+    public void testMap() throws Exception {
+        Assert.assertEquals("hello", mapTests.viewMap("key1"));
 
 
     }
@@ -42,3 +42,4 @@ public class ComboAppTest {
 
     }
 }
+

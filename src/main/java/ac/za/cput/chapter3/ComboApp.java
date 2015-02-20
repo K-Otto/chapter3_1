@@ -8,10 +8,12 @@ import java.util.List;
  */
 public interface ComboApp {
 
-    void list1(int a, String b);
+    public void list11(int a, String b);
     void set11(String b);
     void map11(String a, String b);
-    public String views();
+    public String viewList();
+    public String viewSet();
+    public String viewMap(String key);
 
 
 }

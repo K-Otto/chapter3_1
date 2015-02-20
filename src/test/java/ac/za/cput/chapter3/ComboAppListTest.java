@@ -1,7 +1,6 @@
 package ac.za.cput.chapter3;
 
 import ac.za.cput.chapter3.Config.AppConfig;
-import ac.za.cput.chapter3.Impl.ComboAppImpl;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -12,7 +11,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 /**
  * Created by student on 2015/02/20.
  */
-public class ComboAppTest {
+public class ComboAppListTest {
     private ComboApp listTests;
     private ApplicationContext ctx;
 
@@ -42,3 +41,4 @@ public class ComboAppTest {
 
     }
 }
+
