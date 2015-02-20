@@ -12,22 +12,30 @@ public class ComboAppImpl implements ComboApp {
     private ListApp listAddModule = new ListAppImpl();
     private SetApp setAddModule = new SetAppImpl();
     private MapApp mapAddModule = new MapAppImpl();
+    private CollectionApp CAddModule = new CollectionAppsImpl();
 
     @Override
     public void list11(int a, String b) {
         listAddModule.add1(a, b);
-
-
-
     }
     @Override
     public void set11(String a) {
         setAddModule.add1(a);
     }
+
     @Override
     public void map11(String a, String b) {
         mapAddModule.add1(a, b);
     }
+
+    @Override
+    public void collect11(int a, String b, String c) {
+        CAddModule.add2(a, b,c);
+    }
+
+
+
+
 
     @Override
     public String viewList() {
@@ -42,7 +50,10 @@ public class ComboAppImpl implements ComboApp {
         return mapAddModule.viewMap(key);
     }
 
-
+    @Override
+    public String viewCollect() {
+        return CAddModule.view();
+    }
 
 }
 

@@ -11,26 +11,26 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 /**
  * Created by student on 2015/02/20.
  */
-public class ComboAppSetTest {
-    private ComboApp setTests;
+public class ComboCollectTest {
+    private ComboApp collectTests;
     private ApplicationContext ctx;
 
     @Before
     public void setUp() throws Exception {
         ctx = new AnnotationConfigApplicationContext(AppConfig.class);
-        setTests = (ComboApp)ctx.getBean("calc");
+        collectTests = (ComboApp)ctx.getBean("calc");
 
 
 
 
 
-        setTests.set11("hello");
+        collectTests.collect11(0,"1", "1");
 
     }
 
     @Test
-    public void testSet() throws Exception {
-        Assert.assertEquals("[hello]", setTests.viewSet());
+    public void testCollect() throws Exception {
+        Assert.assertEquals("[011]",collectTests.viewCollect());
 
 
     }
@@ -41,6 +41,5 @@ public class ComboAppSetTest {
 
     }
 }
-
 
 
